@@ -5,6 +5,8 @@ const projectRoutes = require('./routes/projects');
 const employeeRoutes = require('./routes/employees');
 const externalEntityRoutes = require('./routes/externalEntities');
 const externalPersonRoutes = require('./routes/externalPersons');
+const paymentTypeRoutes = require('./routes/paymentTypes');
+const deliverableRoutes = require('./routes/deliverables');
 const authRoutes = require('./routes/auth');
 const sequelize = require('./config/database');
 
@@ -15,6 +17,8 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/externalEntities', externalEntityRoutes);
 app.use('/api/externalPersons', externalPersonRoutes);
+app.use('/api/paymentTypes', paymentTypeRoutes);
+app.use('/api/deliverables',deliverableRoutes );
 app.use('/api/auth', authRoutes);
 
 // Synchroniser la base de données
