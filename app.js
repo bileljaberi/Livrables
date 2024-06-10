@@ -7,6 +7,11 @@ const externalEntityRoutes = require('./routes/externalEntities');
 const externalPersonRoutes = require('./routes/externalPersons');
 const paymentTypeRoutes = require('./routes/paymentTypes');
 const deliverableRoutes = require('./routes/deliverables');
+const deliverableTypeRoutes = require('./routes/deliverableTypes');
+const deliverableFormatRoutes = require('./routes/deliverableFormats');
+const deliverableCategoryRoutes = require('./routes/deliverableCategories');
+const workflowRoutes = require('./routes/workflows');
+const docBibleRoutes = require('./routes/docBibles');
 const authRoutes = require('./routes/auth');
 const sequelize = require('./config/database');
 
@@ -18,7 +23,12 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/externalEntities', externalEntityRoutes);
 app.use('/api/externalPersons', externalPersonRoutes);
 app.use('/api/paymentTypes', paymentTypeRoutes);
-app.use('/api/deliverables',deliverableRoutes );
+app.use('/api/deliverables', deliverableRoutes);
+app.use('/api/deliverableTypes', deliverableTypeRoutes);
+app.use('/api/deliverableFormats', deliverableFormatRoutes);
+app.use('/api/deliverableCategories', deliverableCategoryRoutes);
+app.use('/api/workflows', workflowRoutes);
+app.use('/api/docBibles', docBibleRoutes);
 app.use('/api/auth', authRoutes);
 
 // Synchroniser la base de données
